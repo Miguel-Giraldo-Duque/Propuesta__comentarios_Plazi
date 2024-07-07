@@ -1,0 +1,57 @@
+
+
+## Texto de ejemplo !
+
+
+
+
+Bueno por algún motivo no me dejo responder la pregunta de Luis la cual es:
+
+
+*Se me ocurrió en que se podría hacer un hash de los tokens para así darle una capa de seguridad al token, pero... esto realmente es posible? como por ejemplo con bcrypt? seguiria funcionando?*
+
+Esta es mi respuesta: 
+
+**Hola Luis👋**
+
+Me dejaste pensando y busque poco .
+Sabemos que JWT firma el token no lo encripta , cual es la diferencia? , que cuando firmas el token el payload es accesible y cuando lo encriptas ya no lo es , entiendo la intención de usar bycript pero ten en cuenta que bycript no encripta como tal hace un proceso de hash  unidireccional que impediría revertir el estado original del token, un método para lograr la encriptación es de la propia librería jose aquí te dejo un código de ejemplo   
+
+
+````
+npm install jose
+const jwt = require('jsonwebtoken');
+const { JWE, JWK } = require('jose');
+
+// Clave secreta para firmar el JWT
+const secret = "ultraSecreto";
+
+// Configuración del JWT
+const jwtConfig = {
+  expiresIn: '30s',
+};
+
+// Payload del JWT
+const payload = {
+  sub: 1,
+  role: "cliente"
+};
+
+// Firma el JWT
+const signedToken = jwt.sign(payload, secret, jwtConfig);
+console.log("Signed JWT:", signedToken);
+
+
+// Genera una clave de encriptación
+const key = JWK.asKey("ultraSecretoClaveParaEncriptar", { alg: 'A256GCM', use: 'enc' });
+
+// Encripta el JWT firmado
+const encryptedToken = JWE.encrypt(token, key);
+console.log("Encrypted JWT:", encryptedToken);
+
+// Para desencriptar el JWT
+const decryptedToken = JWE.decrypt(encryptedToken, key);
+console.log("Decrypted Token:", decryptedToken);
+````
+
+Espero te sirva💚
