@@ -1,15 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react'
-
+import { Transformer } from './Traformer'
 export const Trascriptor = (options) => {
   const [isListening, setIsListening] = useState(false)
   const [transcript, setTrasnscript] = useState("")
   const recgonitionRef = useRef(null) 
   
+  const {request } = Transformer()
+  
+
   useEffect(() =>{
     if(!("webkitSpeechRecognition" in window)){
         console.error("Web speeach is not suported")
         return
     }
+    console.log(request())
     recgonitionRef.current = new window.webkitSpeechRecognition()
     const recogntion =  recgonitionRef.current
     recogntion.interimResults = options.interimResults || true
@@ -25,7 +29,7 @@ export const Trascriptor = (options) => {
 
     recogntion.onresult = (event) =>{
 
-      
+
       // const regex = /título\s+(.*?)\s(texto|negrilla|codigo|italico)/;
       // const titles = info.match(regex)
       // if (titles) {
