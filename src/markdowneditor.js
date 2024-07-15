@@ -24,7 +24,7 @@ export const MarkdownEditor = () => {
 
   // useEffect para cargar contenido inicial desde un archivo (comentado actualmente)
   useEffect(() => {
-    fetch("/file.txt")
+    fetch("./textoEjemplo.txt")
       .then(response => response.text())
       .then(text => setValue(text));
   }, []);
