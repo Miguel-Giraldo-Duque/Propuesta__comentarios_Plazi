@@ -10,7 +10,8 @@ El objetivo de este proyecto es realizar una propuesta para la sección de comen
 
   
 
-![Demo](https://img.youtube.com/vi/R1EEgBJt4gs/0.jpg)](https://www.youtube.com/watch?v=R1EEgBJt4gs)
+![Demo](https://img.youtube.com/vi/R1EEgBJt4gs/0.jpg)]
+(https://www.youtube.com/watch?v=R1EEgBJt4gs)
 
   
   
