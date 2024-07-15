@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import { MarkdownEditor } from './markdowneditor.js';
 function App() {
   return (

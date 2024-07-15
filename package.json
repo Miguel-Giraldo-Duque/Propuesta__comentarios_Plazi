@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@langchain/community": "^0.2.17",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.2",
     "dotenv": "^16.4.5",
+    "langchain": "^0.2.8",
     "ollama": "^0.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
