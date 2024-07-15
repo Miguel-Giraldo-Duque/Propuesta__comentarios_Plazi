@@ -1,10 +1,10 @@
 ## Descripción del proyecto
 
-  
+[Link del proyecto](https://propuesta-seccion-comentarios-q8qy5wkzc.vercel.app/)
 
 El objetivo de este proyecto es realizar una propuesta para la sección de comentarios de la plataforma de aprendizaje digital Platzi, considerando algunas funcionalidades que podrían ser de amplia utilidad y mejorar la experiencia de usuario para la comunidad de estudiantes en Platzi. Mis propuestas son:
 
-  
+ 
 
 ### ¿Cómo usar la herramienta? 📺
 
