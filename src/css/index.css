@@ -129,7 +129,7 @@ background-color: #ffffff;
   background-position: center;
   transform: rotateX('90');
   border: none;
-  
+  cursor: pointer;
   background-repeat: no-repeat;
 }
 
