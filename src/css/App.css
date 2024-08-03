@@ -14,11 +14,40 @@
   margin-bottom: 90px; /* Espacio entre el título y el contenido */
   color: #fff; /* Color del texto del título */
 }
-
+.player{
+  width: 650px;
+  height: 350px;
+  margin-bottom: 30px;
+}
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
   align-items: center;
+}
+
+
+@media (max-width: 600px) {
+  .player{
+    position: relative;
+    width: 350px;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  .title{
+    width: 200px;
+  }
+  .App{
+    height: 100%;
+  }
+  .content  {
+    flex-direction: column;
+    justify-content: safe;
+  }
+
+  .conteiner{
+    width: 200px;
+  }
 }
